@@ -1,0 +1,23 @@
+[package]
+name = "prism-app"
+version = "0.1.0"
+edition = "2021"
+description = "Prism — The studio in a window. A precision design tool suite for Unreal Engine 5."
+
+[[bin]]
+name = "prism"
+path = "src/main.rs"
+
+[dependencies]
+winit          = "0.30"
+wgpu           = { version = "25", features = ["wgsl"] }
+bytemuck       = { version = "1", features = ["derive"] }
+pollster       = "0.3"
+glam           = "0.29"
+log            = "0.4"
+env_logger     = "0.11"
+
+[profile.release]
+opt-level     = 3
+lto           = true
+codegen-units = 1
