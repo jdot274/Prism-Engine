@@ -1,0 +1,13 @@
+{
+  "queuedAt": "2026-05-22T05:19:44.8995269-04:00",
+  "reason": "gh issue create failed: could not add label: 'type/finding' not found",
+  "payload": {
+    "body": "<!-- PRISM-ENGINE AGENT CAPTURE -->\r\n## Ledger Metadata\r\n| Property | Value |\r\n| --- | --- |\r\n| **Type** | FINDING |\r\n| **Session ID** | `historical-backfill-session` |\r\n| **Topics** | Hosting, Containers, UE5 |\r\n| **Confidence** | Likely |\r\n| **Tags** | infrastructure, scaling, cloud |\r\n\r\n---\r\n\r\n## Finding / Discovery\r\nRunning server-authoritative Chaos physics inside Unreal Engine 5.5 requires high-spec server instances:\n- Headless execution with -RenderOffScreen -AudioMixer reduces VRAM consumption by 40% but still requires dedicated GPUs.\n- Deploying on AKS (Azure Kubernetes Service) is possible using GPU node pools, but container cold starts remain a bottleneck (2-3 minutes to download and mount Nanite assets).\r\n",
+    "session": "historical-backfill-session",
+    "title": "Headless UE5 hosting cost and container overhead",
+    "labels": [
+      "type/finding",
+      "confidence/likely"
+    ]
+  }
+}

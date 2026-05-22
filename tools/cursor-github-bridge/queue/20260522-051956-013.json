@@ -1,0 +1,13 @@
+{
+  "queuedAt": "2026-05-22T05:19:56.0135893-04:00",
+  "reason": "gh issue create failed: could not add label: 'type/decision' not found",
+  "payload": {
+    "body": "<!-- PRISM-ENGINE AGENT CAPTURE -->\r\n## Ledger Metadata\r\n| Property | Value |\r\n| --- | --- |\r\n| **Type** | DECISION |\r\n| **Session ID** | `historical-backfill-session` |\r\n| **Topics** | Rendering, Splats, Assets |\r\n| **Confidence** | Confirmed |\r\n\r\n---\r\n\r\n## Decision\r\nTraditional high-poly mesh rasterization or Nanite requires massive asset delivery and rendering overhead. Gaussian Splatting in .spz format allows photoreal static environments (such as drone-scanned landscapes and architectural spaces) to render at locked 60fps on mobile devices with tiny file footprints.\r\n\r\n### Trade-Offs\r\nGaussian Splatting is highly performant for static environments but does not support dynamic mesh skinning or real-time rigid fracturing natively. Dynamic assets (like players or projectiles) will still be rendered as traditional GLTF meshes overlaying the splat canvas.\r\n",
+    "session": "historical-backfill-session",
+    "title": "Use Gaussian Splatting (.spz) format for environment visualization",
+    "labels": [
+      "type/decision",
+      "confidence/confirmed"
+    ]
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "queuedAt": "2026-05-22T05:19:47.1455395-04:00",
+  "reason": "gh issue create failed: could not add label: 'type/finding' not found",
+  "payload": {
+    "body": "<!-- PRISM-ENGINE AGENT CAPTURE -->\r\n## Ledger Metadata\r\n| Property | Value |\r\n| --- | --- |\r\n| **Type** | FINDING |\r\n| **Session ID** | `historical-backfill-session` |\r\n| **Topics** | Streaming, WebRTC, Latency |\r\n| **Confidence** | Confirmed |\r\n| **Tags** | hybrid, video, stream |\r\n\r\n---\r\n\r\n## Finding / Discovery\r\nPixel Streaming via WebRTC maps onto a Three.js VideoTexture with sub-100ms latency on average connections.\n- **Jitter Buffer**: Needs to be configured with zero-latency presets on the WebRTC PeerConnection.\n- **Chromium Optimization**: High-frequency controller input datagrams sent via the data channel are parsed instantly, avoiding frame rendering delay.\r\n",
+    "session": "historical-backfill-session",
+    "title": "WebRTC video texture latency in browser",
+    "labels": [
+      "type/finding",
+      "confidence/confirmed"
+    ]
+  }
+}

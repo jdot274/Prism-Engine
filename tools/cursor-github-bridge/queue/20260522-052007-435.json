@@ -1,0 +1,13 @@
+{
+  "queuedAt": "2026-05-22T05:20:07.4359521-04:00",
+  "reason": "gh issue create failed: could not add label: 'type/action' not found",
+  "payload": {
+    "body": "<!-- PRISM-ENGINE AGENT CAPTURE -->\r\n## Ledger Metadata\r\n| Property | Value |\r\n| --- | --- |\r\n| **Type** | ACTION |\r\n| **Session ID** | `historical-backfill-session` |\r\n| **Topics** | Netcode, Physics, Prediction |\r\n| **Confidence** | Confirmed |\r\n\r\n---\r\n\r\n## Action Item / TODO\r\nCreate the core client-side prediction engine.\n- On every client tick, run local Rapier WASM physics step.\n- Send input datagram with sequence ID to server.\n- Cache locally predicted states.\n- Reconcile local state when server authoritative payload arrives.\r\n\r\n**Owner**: @Agent\r\n\r\n**Status**: `Open`\r\n",
+    "session": "historical-backfill-session",
+    "title": "Implement client-side input prediction and server reconciliation loop",
+    "labels": [
+      "type/action",
+      "confidence/confirmed"
+    ]
+  }
+}

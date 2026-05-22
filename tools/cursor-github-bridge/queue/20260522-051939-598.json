@@ -1,0 +1,13 @@
+{
+  "queuedAt": "2026-05-22T05:19:39.5986121-04:00",
+  "reason": "gh issue create failed: could not add label: 'type/finding' not found",
+  "payload": {
+    "body": "<!-- PRISM-ENGINE AGENT CAPTURE -->\r\n## Ledger Metadata\r\n| Property | Value |\r\n| --- | --- |\r\n| **Type** | FINDING |\r\n| **Session ID** | `historical-backfill-session` |\r\n| **Topics** | Rendering, Streaming, Hybrid |\r\n| **Confidence** | Confirmed |\r\n| **Tags** | ue5, cloud, cost |\r\n\r\n---\r\n\r\n## Finding / Discovery\r\nHeadless Unreal Engine 5 hosting in production introduces massive scaling hurdles:\n- **Docker Container Size**: Packaged Linux servers with Nanite/Lumen assets exceed 10GB, resulting in painful cold-start times.\n- **GPU Hosting Costs**: Running dedicated Windows/Linux instances with RTX-enabled virtual machines costs roughly $0.50 to $2.00 per active hour, rendering indie scale unprofitable.\n- **Three.js Alternative**: Web-Native rendering via Three.js leverages the player's local GPU resources, dropping server costs to near-zero (CDN bandwidth only).\r\n",
+    "session": "historical-backfill-session",
+    "title": "Three.js vs UE5 Pixel Streaming performance and hosting costs",
+    "labels": [
+      "type/finding",
+      "confidence/confirmed"
+    ]
+  }
+}

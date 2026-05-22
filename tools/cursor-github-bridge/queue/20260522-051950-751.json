@@ -1,0 +1,13 @@
+{
+  "queuedAt": "2026-05-22T05:19:50.7516237-04:00",
+  "reason": "gh issue create failed: could not add label: 'type/finding' not found",
+  "payload": {
+    "body": "<!-- PRISM-ENGINE AGENT CAPTURE -->\r\n## Ledger Metadata\r\n| Property | Value |\r\n| --- | --- |\r\n| **Type** | FINDING |\r\n| **Session ID** | `historical-backfill-session` |\r\n| **Topics** | Physics, WASM, Rapier |\r\n| **Confidence** | Confirmed |\r\n| **Tags** | physics, engine, simulation |\r\n\r\n---\r\n\r\n## Finding / Discovery\r\nBy compiling the Rust \rapier3d crate to WebAssembly, we can run identical, deterministic physics simulations on both the client (browser) and the SpacetimeDB server.\n- **Precision**: Requires using strictly typed fixed-point mathematics or uniform floating point conversions.\n- **Reconciliation**: Enabling identical calculations allows the client to predict movement instantly, interpolating only when the server pushes a corrected state payload.\r\n",
+    "session": "historical-backfill-session",
+    "title": "Rapier physics compilation to WASM for prediction",
+    "labels": [
+      "type/finding",
+      "confidence/confirmed"
+    ]
+  }
+}

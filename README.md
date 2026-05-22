@@ -140,3 +140,9 @@ npm run dev
 3. Verify that you can orbit and navigate this world at high frame rates. 
 
 If this performance and visual fidelity meet your art direction needs, **lock in Fork B**. You will save months of head-of-line blocking development, avoid running heavy headless instances of Unreal Engine on costly GPU instances, and own a unified, high-performance WebTransport system.
+
+---
+
+## Research
+
+- [research/threejs-ue5-hybrid/](research/threejs-ue5-hybrid/README.md) — *Three.js ↔ UE5 Unconventional Interop: A 2026 Field Guide.* The long-form research drop behind the Fork A / Fork B decision above: executive summary of the five candidate architectures, deep-dives on Gaussian splat shared assets, WebTransport plumbing, headless Chaos + Rapier prediction, the `scene.v1` DSL design, prior-art catalog, and a custom-build vs off-the-shelf checklist. Start with [its README](research/threejs-ue5-hybrid/README.md).

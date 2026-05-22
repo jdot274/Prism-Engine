@@ -1,0 +1,13 @@
+{
+  "queuedAt": "2026-05-22T05:19:42.9402317-04:00",
+  "reason": "gh issue create failed: could not add label: 'type/finding' not found",
+  "payload": {
+    "body": "<!-- PRISM-ENGINE AGENT CAPTURE -->\r\n## Ledger Metadata\r\n| Property | Value |\r\n| --- | --- |\r\n| **Type** | FINDING |\r\n| **Session ID** | `historical-backfill-session` |\r\n| **Topics** | Rendering, Splats, Three.js |\r\n| **Confidence** | Confirmed |\r\n| **Tags** | 3d, scanning, web |\r\n\r\n---\r\n\r\n## Finding / Discovery\r\nGaussian Splatting in .spz (Super-compressed PLY) format provides outstanding performance over raw .ply files:\n- Compression ratios reach up to **10x** smaller file sizes without noticeable visual degradation.\n- Integration in Three.js using @gsplat/three is fully verified.\n- Static environments (such as photoreal rooms and terrain scans) render at locked 60fps on mobile Safari and Chrome.\r\n",
+    "session": "historical-backfill-session",
+    "title": "Gaussian Splatting (.spz) loading in Three.js",
+    "labels": [
+      "type/finding",
+      "confidence/confirmed"
+    ]
+  }
+}

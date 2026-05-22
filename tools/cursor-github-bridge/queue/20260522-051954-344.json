@@ -1,0 +1,13 @@
+{
+  "queuedAt": "2026-05-22T05:19:54.3451083-04:00",
+  "reason": "gh issue create failed: could not add label: 'type/decision' not found",
+  "payload": {
+    "body": "<!-- PRISM-ENGINE AGENT CAPTURE -->\r\n## Ledger Metadata\r\n| Property | Value |\r\n| --- | --- |\r\n| **Type** | DECISION |\r\n| **Session ID** | `historical-backfill-session` |\r\n| **Topics** | Architecture, Physics, Fork B |\r\n| **Confidence** | Confirmed |\r\n\r\n---\r\n\r\n## Decision\r\nRunning headless UE5 instances in production introduces massive overhead:\n- Dedicated GPU VMs are expensive.\n- Packaged Linux servers exceed 10GB.\n- Scaling dynamically to match player count is sluggish due to cold start times.\n\nPivoting to Rust + Rapier compiled to WASM and hosted on SpacetimeDB allows unified, deterministic physics prediction on the client side at zero server GPU overhead.\r\n\r\n### Trade-Offs\r\nWe give up Unreal's proprietary Niagara particle systems and Chaos vehicle simulations. We must implement alternative custom visual effects in Three.js and custom vehicle physics in Rapier.\r\n",
+    "session": "historical-backfill-session",
+    "title": "Pivot from headless Unreal Engine 5 to Web-Native Rust + Rapier for Fork B",
+    "labels": [
+      "type/decision",
+      "confidence/confirmed"
+    ]
+  }
+}

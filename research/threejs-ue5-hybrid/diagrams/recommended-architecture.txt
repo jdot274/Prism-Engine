@@ -1,0 +1,86 @@
+Recommended architecture for the Prism Engine hybrid (UE5 + Three.js).
+Source: research/threejs-ue5-hybrid/08-recommended-architecture.md (§8 of the
+2026-05-22 research synthesis). Plain text so it can be embedded in slides,
+issue threads, READMEs, or copied verbatim into a FigJam board.
+
+                      +-----------------------------------------+
+                      |             AUTHORING LAYER             |
+                      |  Figma   Spline   Unicorn   PolyHaven   |
+                      |  (UI)    (hero)   (bg fx)   (PBR)       |
+                      |            VRM avatars (Pixiv -> VRM4U) |
+                      |            Gaussian Splats (.ply/.spz)  |
+                      |            Rive (HUD/UI motion)         |
+                      +--------------------+--------------------+
+                                           |
+                              .scene.tsx, .figma.json, *.spline, *.riv, *.ply
+                                           |
+                                           v
+                  +--------------------------------------------+
+                  |             COMPILER  /  PACKER            |
+                  |  SWC -> scene.v1 JSON + scene.bin          |
+                  |  KTX2 / Draco / Meshopt v1.1 / .spz        |
+                  |  mappings.json  (web <-> UE asset paths)   |
+                  +--------------+------------------+----------+
+                                 |                  |
+                          scene.v1 (CDN)     scene.v1 (cooked UDataAsset)
+                                 |                  |
+              +------------------v---+         +----v------------------+
+              |     WEB CLIENT       |         |  UE5 DEDICATED SERVER |
+              |  Vite + R3F v10      |         |  (Linux, -nullrhi)    |
+              |  drei v11 / webgpu   |         |  Forked Lyra:         |
+              |  three-uikit (UI)    |         |  Experiences + GAS +  |
+              |  Spark (Gaussians)   |         |  EOS + Iris + Chaos   |
+              |  Rapier-determin.    |         |                       |
+              |   (client predict)   |         |  UExporterSubsystem:  |
+              |  Rive (HUD)          |         |  walks Iris quantized |
+              |  Manifold-WASM       |         |  state -> bit-packed  |
+              |   (parametric geo)   |         |  delta -> gateway     |
+              +----------+-----------+         +----------+------------+
+                         |                                |
+                         |       WebTransport (QUIC)      |
+                         |       binary deltas @ 30Hz     |
+                         +---------------+----------------+
+                                         v
+                  +--------------------------------------------+
+                  |      RUST EDGE GATEWAY (per region)        |
+                  |  wtransport / quinn + tungstenite (WS fb)  |
+                  |  Maps WT sessions <-> UE5 NetConnections   |
+                  |  Auth via EOS Web API + your JWT           |
+                  |  Lag-comp ring buffer, rate limits         |
+                  +------+---------------------+---------------+
+                         |                     |
+                         | Local UDP/loopback  |
+                         |                     |
+                         v                     v
+              +--------------------+   +--------------------------+
+              | Backend services   |   |   Optional companion     |
+              | Nakama / Go / Node |   |  PIXEL STREAMING 2 edge  |
+              | Match orch (Agones)|   |  AV1 on RTX 40/L40S      |
+              | Postgres + Redis   |   |  for trailers, AAA-tier  |
+              | CF R2 CDN (assets) |   |  showcase zones,         |
+              | LiveKit SFU (voice)|   |  asymmetric VR pairing   |
+              | ClickHouse (telem) |   +--------------------------+
+              +--------------------+
+
+                  +--------------------------------------------+
+                  |            DEV-ONLY HOT RELOAD             |
+                  |  chokidar -> ws://localhost:9011           |
+                  |   |-- R3F: diff store, morphScene()        |
+                  |   `-- UE5: Cortex-style plugin ->          |
+                  |            UDataAsset + FScopedTransaction |
+                  +--------------------------------------------+
+
+Notes
+-----
+* "Forked Lyra" assumes the architecture in research/threejs-ue5-hybrid/05-ue5-
+  physics-only-architecture.md sec. 5.9 (rendering/HUD/MetaHuman stripped;
+  Experiences + GAS + EOS retained).
+* The bidirectional "scene.v1 JSON" stream feeds both runtimes from the same
+  compiled source; see 07-meta-scene-tool-design.md for the DSL spec.
+* Optional Pixel Streaming 2 edge is the path described in 04-fake-rendering-
+  tricks.md sec. 4.1 -- specifically the "creative" usage with a Three.js HTML
+  overlay over the streamed video.
+* The total custom-build budget for the bespoke pieces (UExporterSubsystem,
+  Rust gateway, SWC transform, R3F morphScene reconciler, UE5 hot-reload
+  plugin) is approximately 3-4 months of one engineer's focused work; see
+  10-build-vs-buy.md for the breakdown.

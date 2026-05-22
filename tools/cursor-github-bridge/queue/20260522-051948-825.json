@@ -1,0 +1,13 @@
+{
+  "queuedAt": "2026-05-22T05:19:48.8255772-04:00",
+  "reason": "gh issue create failed: could not add label: 'type/finding' not found",
+  "payload": {
+    "body": "<!-- PRISM-ENGINE AGENT CAPTURE -->\r\n## Ledger Metadata\r\n| Property | Value |\r\n| --- | --- |\r\n| **Type** | FINDING |\r\n| **Session ID** | `historical-backfill-session` |\r\n| **Topics** | Network, Protocol, HTTP3 |\r\n| **Confidence** | Confirmed |\r\n| **Tags** | webtransport, transport, networking |\r\n\r\n---\r\n\r\n## Finding / Discovery\r\nWebSockets run on TCP, meaning a single dropped packet stalls all subsequent packets (head-of-line blocking).\n- **WebTransport (HTTP/3)**: Employs QUIC under the hood, enabling parallel, independent streams and unreliable datagrams.\n- **Impact**: Packet loss on player movement vectors does not stall the RPC control stream, reducing netcode stuttering to absolute zero in poor Wi-Fi conditions.\r\n",
+    "session": "historical-backfill-session",
+    "title": "WebTransport multiplexing vs TCP head-of-line blocking",
+    "labels": [
+      "type/finding",
+      "confidence/confirmed"
+    ]
+  }
+}

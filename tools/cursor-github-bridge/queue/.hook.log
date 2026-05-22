@@ -1,0 +1,131 @@
+[2026-05-22T05:14:00-04:00] [INFO] sync-to-github invoked (stdin bytes: 609)
+[2026-05-22T05:14:02-04:00] [INFO] no capture blocks in new text
+[2026-05-22T05:15:15-04:00] [INFO] sync-to-github invoked (stdin bytes: 514)
+[2026-05-22T05:15:15-04:00] [INFO] no new assistant text
+[2026-05-22T05:15:52-04:00] [INFO] sync-to-github invoked (stdin bytes: 609)
+[2026-05-22T05:15:53-04:00] [INFO] no capture blocks in new text
+[2026-05-22T05:16:02-04:00] [INFO] checking GitHub labels...
+[2026-05-22T05:16:04-04:00] [INFO] creating issue: PlayCanvas WebGL viewer performs well with 10k entities (labels: type/finding,confidence/confirmed)
+[2026-05-22T05:16:05-04:00] [WARN] failed to create issue: gh issue create failed: could not add label: 'type/finding' not found
+[2026-05-22T05:16:05-04:00] [INFO] checking GitHub labels...
+[2026-05-22T05:16:07-04:00] [INFO] creating issue: Three.js vs UE5 Pixel Streaming performance and hosting costs (labels: type/finding,confidence/confirmed)
+[2026-05-22T05:16:08-04:00] [WARN] failed to create issue: gh issue create failed: could not add label: 'type/finding' not found
+[2026-05-22T05:16:09-04:00] [INFO] checking GitHub labels...
+[2026-05-22T05:16:10-04:00] [INFO] creating issue: Photon Fusion vs SpacetimeDB for Fork B netcode (labels: type/finding,confidence/confirmed)
+[2026-05-22T05:16:12-04:00] [WARN] failed to create issue: gh issue create failed: could not add label: 'type/finding' not found
+[2026-05-22T05:16:14-04:00] [INFO] checking GitHub labels...
+[2026-05-22T05:16:15-04:00] [INFO] creating issue: Gaussian Splatting (.spz) loading in Three.js (labels: type/finding,confidence/confirmed)
+[2026-05-22T05:16:16-04:00] [WARN] failed to create issue: gh issue create failed: could not add label: 'type/finding' not found
+[2026-05-22T05:16:17-04:00] [INFO] checking GitHub labels...
+[2026-05-22T05:16:18-04:00] [INFO] creating issue: Headless UE5 hosting cost and container overhead (labels: type/finding,confidence/likely)
+[2026-05-22T05:16:20-04:00] [WARN] failed to create issue: gh issue create failed: could not add label: 'type/finding' not found
+[2026-05-22T05:16:21-04:00] [INFO] checking GitHub labels...
+[2026-05-22T05:16:22-04:00] [INFO] creating issue: WebRTC video texture latency in browser (labels: type/finding,confidence/confirmed)
+[2026-05-22T05:16:23-04:00] [WARN] failed to create issue: gh issue create failed: could not add label: 'type/finding' not found
+[2026-05-22T05:16:24-04:00] [INFO] checking GitHub labels...
+[2026-05-22T05:16:26-04:00] [INFO] creating issue: WebTransport multiplexing vs TCP head-of-line blocking (labels: type/finding,confidence/confirmed)
+[2026-05-22T05:16:27-04:00] [WARN] failed to create issue: gh issue create failed: could not add label: 'type/finding' not found
+[2026-05-22T05:16:28-04:00] [INFO] checking GitHub labels...
+[2026-05-22T05:16:30-04:00] [INFO] creating issue: Rapier physics compilation to WASM for prediction (labels: type/finding,confidence/confirmed)
+[2026-05-22T05:16:31-04:00] [WARN] failed to create issue: gh issue create failed: could not add label: 'type/finding' not found
+[2026-05-22T05:16:32-04:00] [INFO] checking GitHub labels...
+[2026-05-22T05:16:34-04:00] [INFO] creating issue: Adopt WebTransport over WebSockets for Fork B netcode (labels: type/decision,confidence/confirmed)
+[2026-05-22T05:16:35-04:00] [WARN] failed to create issue: gh issue create failed: could not add label: 'type/decision' not found
+[2026-05-22T05:16:36-04:00] [INFO] checking GitHub labels...
+[2026-05-22T05:16:37-04:00] [INFO] creating issue: Pivot from headless Unreal Engine 5 to Web-Native Rust + Rapier for Fork B (labels: type/decision,confidence/confirmed)
+[2026-05-22T05:16:39-04:00] [WARN] failed to create issue: gh issue create failed: could not add label: 'type/decision' not found
+[2026-05-22T05:16:40-04:00] [INFO] checking GitHub labels...
+[2026-05-22T05:16:41-04:00] [INFO] creating issue: Use Gaussian Splatting (.spz) format for environment visualization (labels: type/decision,confidence/confirmed)
+[2026-05-22T05:16:43-04:00] [WARN] failed to create issue: gh issue create failed: could not add label: 'type/decision' not found
+[2026-05-22T05:16:43-04:00] [INFO] checking GitHub labels...
+[2026-05-22T05:16:45-04:00] [INFO] creating issue: Standardize on Conventional Commits with Prism Ledger metadata (labels: type/decision,confidence/confirmed)
+[2026-05-22T05:16:46-04:00] [WARN] failed to create issue: gh issue create failed: could not add label: 'type/decision' not found
+[2026-05-22T05:16:47-04:00] [INFO] checking GitHub labels...
+[2026-05-22T05:16:48-04:00] [INFO] creating issue: Scaffold Vite + TypeScript client for Fork B (labels: type/action,confidence/confirmed)
+[2026-05-22T05:16:49-04:00] [WARN] failed to create issue: gh issue create failed: could not add label: 'type/action' not found
+[2026-05-22T05:16:50-04:00] [INFO] checking GitHub labels...
+[2026-05-22T05:16:51-04:00] [INFO] creating issue: Compile Rapier physics to WASM assembly (labels: type/action,confidence/likely)
+[2026-05-22T05:16:52-04:00] [WARN] failed to create issue: gh issue create failed: could not add label: 'type/action' not found
+[2026-05-22T05:16:53-04:00] [INFO] checking GitHub labels...
+[2026-05-22T05:16:54-04:00] [INFO] creating issue: Setup local SpacetimeDB server and entity tables in Rust (labels: type/action,confidence/confirmed)
+[2026-05-22T05:16:55-04:00] [WARN] failed to create issue: gh issue create failed: could not add label: 'type/action' not found
+[2026-05-22T05:16:56-04:00] [INFO] checking GitHub labels...
+[2026-05-22T05:16:57-04:00] [INFO] creating issue: Create Three.js Gaussian Splat (.spz) environment viewer (labels: type/action,confidence/confirmed)
+[2026-05-22T05:16:58-04:00] [WARN] failed to create issue: gh issue create failed: could not add label: 'type/action' not found
+[2026-05-22T05:16:59-04:00] [INFO] checking GitHub labels...
+[2026-05-22T05:17:00-04:00] [INFO] creating issue: Implement client-side input prediction and server reconciliation loop (labels: type/action,confidence/confirmed)
+[2026-05-22T05:17:02-04:00] [WARN] failed to create issue: gh issue create failed: could not add label: 'type/action' not found
+[2026-05-22T05:18:07-04:00] [INFO] checking GitHub labels...
+[2026-05-22T05:18:08-04:00] [INFO] creating missing label: 
+[2026-05-22T05:18:08-04:00] [INFO] creating missing label: 
+[2026-05-22T05:18:08-04:00] [INFO] creating issue: PlayCanvas WebGL viewer performs well with 10k entities (labels: type/finding,confidence/confirmed)
+[2026-05-22T05:18:10-04:00] [WARN] failed to create issue: gh issue create failed: could not add label: 'type/finding' not found
+[2026-05-22T05:18:11-04:00] [INFO] creating issue: Three.js vs UE5 Pixel Streaming performance and hosting costs (labels: type/finding,confidence/confirmed)
+[2026-05-22T05:18:12-04:00] [WARN] failed to create issue: gh issue create failed: could not add label: 'type/finding' not found
+[2026-05-22T05:18:13-04:00] [INFO] creating issue: Photon Fusion vs SpacetimeDB for Fork B netcode (labels: type/finding,confidence/confirmed)
+[2026-05-22T05:18:15-04:00] [WARN] failed to create issue: gh issue create failed: could not add label: 'type/finding' not found
+[2026-05-22T05:18:17-04:00] [INFO] creating issue: Gaussian Splatting (.spz) loading in Three.js (labels: type/finding,confidence/confirmed)
+[2026-05-22T05:18:19-04:00] [WARN] failed to create issue: gh issue create failed: could not add label: 'type/finding' not found
+[2026-05-22T05:18:20-04:00] [INFO] creating issue: Headless UE5 hosting cost and container overhead (labels: type/finding,confidence/likely)
+[2026-05-22T05:18:21-04:00] [WARN] failed to create issue: gh issue create failed: could not add label: 'type/finding' not found
+[2026-05-22T05:18:22-04:00] [INFO] creating issue: WebRTC video texture latency in browser (labels: type/finding,confidence/confirmed)
+[2026-05-22T05:18:23-04:00] [WARN] failed to create issue: gh issue create failed: could not add label: 'type/finding' not found
+[2026-05-22T05:18:24-04:00] [INFO] creating issue: WebTransport multiplexing vs TCP head-of-line blocking (labels: type/finding,confidence/confirmed)
+[2026-05-22T05:18:25-04:00] [WARN] failed to create issue: gh issue create failed: could not add label: 'type/finding' not found
+[2026-05-22T05:18:26-04:00] [INFO] creating issue: Rapier physics compilation to WASM for prediction (labels: type/finding,confidence/confirmed)
+[2026-05-22T05:18:27-04:00] [WARN] failed to create issue: gh issue create failed: could not add label: 'type/finding' not found
+[2026-05-22T05:18:28-04:00] [INFO] creating issue: Adopt WebTransport over WebSockets for Fork B netcode (labels: type/decision,confidence/confirmed)
+[2026-05-22T05:18:29-04:00] [WARN] failed to create issue: gh issue create failed: could not add label: 'type/decision' not found
+[2026-05-22T05:18:30-04:00] [INFO] creating issue: Pivot from headless Unreal Engine 5 to Web-Native Rust + Rapier for Fork B (labels: type/decision,confidence/confirmed)
+[2026-05-22T05:18:32-04:00] [WARN] failed to create issue: gh issue create failed: could not add label: 'type/decision' not found
+[2026-05-22T05:18:33-04:00] [INFO] creating issue: Use Gaussian Splatting (.spz) format for environment visualization (labels: type/decision,confidence/confirmed)
+[2026-05-22T05:18:34-04:00] [WARN] failed to create issue: gh issue create failed: could not add label: 'type/decision' not found
+[2026-05-22T05:18:35-04:00] [INFO] creating issue: Standardize on Conventional Commits with Prism Ledger metadata (labels: type/decision,confidence/confirmed)
+[2026-05-22T05:18:36-04:00] [WARN] failed to create issue: gh issue create failed: could not add label: 'type/decision' not found
+[2026-05-22T05:18:38-04:00] [INFO] creating issue: Scaffold Vite + TypeScript client for Fork B (labels: type/action,confidence/confirmed)
+[2026-05-22T05:18:39-04:00] [WARN] failed to create issue: gh issue create failed: could not add label: 'type/action' not found
+[2026-05-22T05:18:39-04:00] [INFO] creating issue: Compile Rapier physics to WASM assembly (labels: type/action,confidence/likely)
+[2026-05-22T05:18:40-04:00] [WARN] failed to create issue: gh issue create failed: could not add label: 'type/action' not found
+[2026-05-22T05:18:41-04:00] [INFO] creating issue: Setup local SpacetimeDB server and entity tables in Rust (labels: type/action,confidence/confirmed)
+[2026-05-22T05:18:42-04:00] [WARN] failed to create issue: gh issue create failed: could not add label: 'type/action' not found
+[2026-05-22T05:18:44-04:00] [INFO] creating issue: Create Three.js Gaussian Splat (.spz) environment viewer (labels: type/action,confidence/confirmed)
+[2026-05-22T05:18:45-04:00] [WARN] failed to create issue: gh issue create failed: could not add label: 'type/action' not found
+[2026-05-22T05:18:46-04:00] [INFO] creating issue: Implement client-side input prediction and server reconciliation loop (labels: type/action,confidence/confirmed)
+[2026-05-22T05:18:47-04:00] [WARN] failed to create issue: gh issue create failed: could not add label: 'type/action' not found
+[2026-05-22T05:19:36-04:00] [INFO] checking GitHub labels...
+[2026-05-22T05:19:36-04:00] [INFO] creating missing label: 
+[2026-05-22T05:19:36-04:00] [INFO] creating missing label: 
+[2026-05-22T05:19:37-04:00] [INFO] creating issue: PlayCanvas WebGL viewer performs well with 10k entities (labels: type/finding,confidence/confirmed)
+[2026-05-22T05:19:38-04:00] [WARN] failed to create issue: gh issue create failed: could not add label: 'type/finding' not found
+[2026-05-22T05:19:38-04:00] [INFO] creating issue: Three.js vs UE5 Pixel Streaming performance and hosting costs (labels: type/finding,confidence/confirmed)
+[2026-05-22T05:19:39-04:00] [WARN] failed to create issue: gh issue create failed: could not add label: 'type/finding' not found
+[2026-05-22T05:19:40-04:00] [INFO] creating issue: Photon Fusion vs SpacetimeDB for Fork B netcode (labels: type/finding,confidence/confirmed)
+[2026-05-22T05:19:41-04:00] [WARN] failed to create issue: gh issue create failed: could not add label: 'type/finding' not found
+[2026-05-22T05:19:41-04:00] [INFO] creating issue: Gaussian Splatting (.spz) loading in Three.js (labels: type/finding,confidence/confirmed)
+[2026-05-22T05:19:42-04:00] [WARN] failed to create issue: gh issue create failed: could not add label: 'type/finding' not found
+[2026-05-22T05:19:43-04:00] [INFO] creating issue: Headless UE5 hosting cost and container overhead (labels: type/finding,confidence/likely)
+[2026-05-22T05:19:44-04:00] [WARN] failed to create issue: gh issue create failed: could not add label: 'type/finding' not found
+[2026-05-22T05:19:45-04:00] [INFO] creating issue: WebRTC video texture latency in browser (labels: type/finding,confidence/confirmed)
+[2026-05-22T05:19:47-04:00] [WARN] failed to create issue: gh issue create failed: could not add label: 'type/finding' not found
+[2026-05-22T05:19:47-04:00] [INFO] creating issue: WebTransport multiplexing vs TCP head-of-line blocking (labels: type/finding,confidence/confirmed)
+[2026-05-22T05:19:48-04:00] [WARN] failed to create issue: gh issue create failed: could not add label: 'type/finding' not found
+[2026-05-22T05:19:49-04:00] [INFO] creating issue: Rapier physics compilation to WASM for prediction (labels: type/finding,confidence/confirmed)
+[2026-05-22T05:19:50-04:00] [WARN] failed to create issue: gh issue create failed: could not add label: 'type/finding' not found
+[2026-05-22T05:19:51-04:00] [INFO] creating issue: Adopt WebTransport over WebSockets for Fork B netcode (labels: type/decision,confidence/confirmed)
+[2026-05-22T05:19:52-04:00] [WARN] failed to create issue: gh issue create failed: could not add label: 'type/decision' not found
+[2026-05-22T05:19:53-04:00] [INFO] creating issue: Pivot from headless Unreal Engine 5 to Web-Native Rust + Rapier for Fork B (labels: type/decision,confidence/confirmed)
+[2026-05-22T05:19:54-04:00] [WARN] failed to create issue: gh issue create failed: could not add label: 'type/decision' not found
+[2026-05-22T05:19:54-04:00] [INFO] creating issue: Use Gaussian Splatting (.spz) format for environment visualization (labels: type/decision,confidence/confirmed)
+[2026-05-22T05:19:55-04:00] [WARN] failed to create issue: gh issue create failed: could not add label: 'type/decision' not found
+[2026-05-22T05:19:56-04:00] [INFO] creating issue: Standardize on Conventional Commits with Prism Ledger metadata (labels: type/decision,confidence/confirmed)
+[2026-05-22T05:19:57-04:00] [WARN] failed to create issue: gh issue create failed: could not add label: 'type/decision' not found
+[2026-05-22T05:19:58-04:00] [INFO] creating issue: Scaffold Vite + TypeScript client for Fork B (labels: type/action,confidence/confirmed)
+[2026-05-22T05:19:59-04:00] [WARN] failed to create issue: gh issue create failed: could not add label: 'type/action' not found
+[2026-05-22T05:19:59-04:00] [INFO] creating issue: Compile Rapier physics to WASM assembly (labels: type/action,confidence/likely)
+[2026-05-22T05:20:00-04:00] [WARN] failed to create issue: gh issue create failed: could not add label: 'type/action' not found
+[2026-05-22T05:20:01-04:00] [INFO] creating issue: Setup local SpacetimeDB server and entity tables in Rust (labels: type/action,confidence/confirmed)
+[2026-05-22T05:20:03-04:00] [WARN] failed to create issue: gh issue create failed: could not add label: 'type/action' not found
+[2026-05-22T05:20:04-04:00] [INFO] creating issue: Create Three.js Gaussian Splat (.spz) environment viewer (labels: type/action,confidence/confirmed)
+[2026-05-22T05:20:05-04:00] [WARN] failed to create issue: gh issue create failed: could not add label: 'type/action' not found
+[2026-05-22T05:20:06-04:00] [INFO] creating issue: Implement client-side input prediction and server reconciliation loop (labels: type/action,confidence/confirmed)
+[2026-05-22T05:20:07-04:00] [WARN] failed to create issue: gh issue create failed: could not add label: 'type/action' not found

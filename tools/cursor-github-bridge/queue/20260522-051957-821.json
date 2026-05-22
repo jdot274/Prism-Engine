@@ -1,0 +1,13 @@
+{
+  "queuedAt": "2026-05-22T05:19:57.8215461-04:00",
+  "reason": "gh issue create failed: could not add label: 'type/decision' not found",
+  "payload": {
+    "body": "<!-- PRISM-ENGINE AGENT CAPTURE -->\r\n## Ledger Metadata\r\n| Property | Value |\r\n| --- | --- |\r\n| **Type** | DECISION |\r\n| **Session ID** | `historical-backfill-session` |\r\n| **Topics** | Workflow, Git, Standards |\r\n| **Confidence** | Confirmed |\r\n\r\n---\r\n\r\n## Decision\r\nTo bridge development history directly with project boards and issue tracking, we enforce a strict Conventional Commits standard containing our custom Ledger footer tags (e.g. Finding, Decision, Workflow-Innovation). This maintains a complete \"double-durable\" audit trail.\r\n\r\n### Trade-Offs\r\nRequires a slight discipline overhead for developers and agents writing commit messages. This is mitigated by integrating git commit-msg linter hooks.\r\n",
+    "session": "historical-backfill-session",
+    "title": "Standardize on Conventional Commits with Prism Ledger metadata",
+    "labels": [
+      "type/decision",
+      "confidence/confirmed"
+    ]
+  }
+}

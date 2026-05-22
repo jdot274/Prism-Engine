@@ -1,0 +1,13 @@
+{
+  "queuedAt": "2026-05-22T05:19:41.2358786-04:00",
+  "reason": "gh issue create failed: could not add label: 'type/finding' not found",
+  "payload": {
+    "body": "<!-- PRISM-ENGINE AGENT CAPTURE -->\r\n## Ledger Metadata\r\n| Property | Value |\r\n| --- | --- |\r\n| **Type** | FINDING |\r\n| **Session ID** | `historical-backfill-session` |\r\n| **Topics** | Network, Database, Fork B |\r\n| **Confidence** | Confirmed |\r\n| **Tags** | multiplayer, rust, server |\r\n\r\n---\r\n\r\n## Finding / Discovery\r\nWe evaluated multiplayer matchmaking and server state synchronization backends:\n- **Photon Fusion**: Highly mature for Unity/C# but painful to integrate cleanly into a web-native Rust pipeline. Requires proprietary cloud brokers.\n- **SpacetimeDB**: A relational database that runs our application code inside the database itself. Allows compiling Rust code to high-performance server assemblies, providing unified client/server state verification.\n- **Verdict**: SpacetimeDB provides the unified state tracking we need for Fork B.\r\n",
+    "session": "historical-backfill-session",
+    "title": "Photon Fusion vs SpacetimeDB for Fork B netcode",
+    "labels": [
+      "type/finding",
+      "confidence/confirmed"
+    ]
+  }
+}

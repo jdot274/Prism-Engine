@@ -1,0 +1,13 @@
+{
+  "queuedAt": "2026-05-22T05:20:03.3854223-04:00",
+  "reason": "gh issue create failed: could not add label: 'type/action' not found",
+  "payload": {
+    "body": "<!-- PRISM-ENGINE AGENT CAPTURE -->\r\n## Ledger Metadata\r\n| Property | Value |\r\n| --- | --- |\r\n| **Type** | ACTION |\r\n| **Session ID** | `historical-backfill-session` |\r\n| **Topics** | Database, Server, SpacetimeDB |\r\n| **Confidence** | Confirmed |\r\n\r\n---\r\n\r\n## Action Item / TODO\r\nInstall SpacetimeDB CLI and establish the local server.\n- Define relational tables for player positions and velocities.\n- Write the game server tick loop (run physics steps).\n- Confirm WebTransport datagram transmission protocol works.\r\n\r\n**Owner**: @Joey\r\n\r\n**Status**: `Open`\r\n",
+    "session": "historical-backfill-session",
+    "title": "Setup local SpacetimeDB server and entity tables in Rust",
+    "labels": [
+      "type/action",
+      "confidence/confirmed"
+    ]
+  }
+}
