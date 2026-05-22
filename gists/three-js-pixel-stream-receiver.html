@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>UE in three.js — Pixel Streaming receiver</title>
+  <style>
+    html, body { margin: 0; height: 100%; background: #000; overflow: hidden; }
+    canvas { display: block; }
+  </style>
+</head>
+<body>
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "https://unpkg.com/three@0.165.0/build/three.module.js",
+        "@epicgames-ps/lib-pixelstreamingfrontend-ue5.5": "https://unpkg.com/@epicgames-ps/lib-pixelstreamingfrontend-ue5.5/dist/lib-pixelstreamingfrontend.esm.js"
+      }
+    }
+  </script>
+
+  <script type="module">
+    import * as THREE from 'three';
+    import { PixelStreaming, Config } from '@epicgames-ps/lib-pixelstreamingfrontend-ue5.5';
+
+    const config = new Config({
+      initialSettings: {
+        ss: 'ws://localhost:80',
+        AutoConnect: true,
+        StartVideoMuted: false,
+        HoveringMouse: true
+      }
+    });
+    const ps = new PixelStreaming(config);
+
+    // Wait for the <video> element to be present (Pixel Streaming creates it on connection)
+    function getVideoElement() {
+      return ps.videoElementParent.querySelector('video');
+    }
+
+    const renderer = new THREE.WebGLRenderer({ antialias: true });
+    renderer.setPixelRatio(devicePixelRatio);
+    renderer.setSize(innerWidth, innerHeight);
+    document.body.appendChild(renderer.domElement);
+
+    const scene = new THREE.Scene();
+    const camera = new THREE.PerspectiveCamera(60, innerWidth/innerHeight, 0.1, 100);
+    camera.position.set(0, 0, 3);
+
+    const mesh = new THREE.Mesh(
+      new THREE.PlaneGeometry(16/9, 1),
+      new THREE.MeshBasicMaterial({ color: 0x101010 })
+    );
+    scene.add(mesh);
+
+    let texture = null;
+    function tryAttachVideoTexture() {
+      const video = getVideoElement();
+      if (!video || texture) return;
+      texture = new THREE.VideoTexture(video);
+      texture.colorSpace = THREE.SRGBColorSpace;
+      mesh.material = new THREE.MeshBasicMaterial({ map: texture });
+    }
+
+    addEventListener('resize', () => {
+      camera.aspect = innerWidth / innerHeight;
+      camera.updateProjectionMatrix();
+      renderer.setSize(innerWidth, innerHeight);
+    });
+
+    const raycaster = new THREE.Raycaster();
+    const pointer = new THREE.Vector2();
+    renderer.domElement.addEventListener('pointerdown', (e) => {
+      pointer.x = (e.clientX / innerWidth) * 2 - 1;
+      pointer.y = -(e.clientY / innerHeight) * 2 + 1;
+      raycaster.setFromCamera(pointer, camera);
+      const hits = raycaster.intersectObject(mesh, true);
+      if (hits.length && ps.emitUIInteraction) {
+        const uv = hits[0].uv;
+        ps.emitUIInteraction({ type: 'click', x: uv.x, y: uv.y });
+      }
+    });
+
+    renderer.setAnimationLoop(() => {
+      tryAttachVideoTexture();
+      renderer.render(scene, camera);
+    });
+  </script>
+</body>
+</html>
