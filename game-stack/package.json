@@ -1,0 +1,13 @@
+{
+  "name": "aaa-web-game-stack",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "npm run dev --workspaces",
+    "install:all": "npm install"
+  }
+}

@@ -22,8 +22,11 @@ This stack relies *strictly* on standard web tech mapped to high-performance API
 *   To guarantee truly cross-platform agnostic fidelity (crucial for iOS Safari / VisionOS alongside desktop browsers), the pipeline enforces **USDZ** as a primary 3D delivery format.
 *   Integrating `usdz` loading bridges spatial-computing ecosystem standards natively into the web context, unlocking AR Quick Look natively alongside the R3F Canvas.
 
-### 4. Containerized Environment
-*   **Docker & Docker Compose:** The entire dev environment, frontend (`5173`) and live server (`3000`), is spun up with a single `docker-compose up` command, guaranteeing identical dev experiences everywhere.
+### 4. Cloud Containerized Dev Environment (GitHub Codespaces)
+*   **Architectural Decision: GitHub Codespaces over Vercel / PlayCanvas.**
+    *   *Why not Vercel?* Vercel excels at serverless/edge hosting but is not suitable for the persistent, stateful WebSocket connections required by our authoritative physics simulation (Colyseus). A true multiplayer game backend needs long-lived processes.
+    *   *Why not PlayCanvas?* PlayCanvas enforces its own proprietary editor and ecosystem, directly conflicting with our custom AAA tech stack of React Three Fiber, Rapier WASM, and Framer Motion.
+*   **GitHub Codespaces & Docker:** By using a `.devcontainer` with Docker-in-Docker, our full-stack environment (frontend on `5173`, live server on `3000`) spins up instantly in the cloud. It guarantees identical developer experiences across any OS or mobile PC, completely agnostic to local hardware constraints.
 
 ---
 
